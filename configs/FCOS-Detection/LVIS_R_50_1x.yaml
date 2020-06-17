@@ -3,6 +3,10 @@ MODEL:
   WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
   RESNETS:
     DEPTH: 50
+  FCOS:
+    NUM_CLASSES: 1230
+    INFERENCE_TH_TEST: 0.0
+    POST_NMS_TOPK_TEST: 300
 DATASETS:
   TRAIN: ("lvis_v0.5_train",)
   TEST: ("lvis_v0.5_val",)
@@ -13,4 +17,4 @@ SOLVER:
   MAX_ITER: 90000
 INPUT:
   MIN_SIZE_TRAIN: (800，)
-OUTPUT_DIR: "output/fcos/R_50_1x"
+OUTPUT_DIR: "output/fcos/lvis_R_50_1x"
