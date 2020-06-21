@@ -49,6 +49,8 @@ dist/
 /weights
 /export
 eval.sh
+/datasets
+pretrained_model
 
 demo/performance.py
 demo/demo2.py
